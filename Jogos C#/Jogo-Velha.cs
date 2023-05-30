@@ -74,6 +74,13 @@ class Program
 
     static bool CheckTie()
     {
-        return !board.Contains(' ');
+        foreach (char position in board)
+        {
+            if (position == ' ')
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
