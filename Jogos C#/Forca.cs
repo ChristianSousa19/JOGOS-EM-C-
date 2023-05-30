@@ -86,7 +86,14 @@ class Program
 
     static bool WordGuessed()
     {
-        return !guessedLetters.Contains('_');
+        for (int i = 0; i < guessedLetters.Length; i++)
+        {
+            if (guessedLetters[i] == '_')
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     static void DisplayEndGameMessage()
@@ -103,3 +110,4 @@ class Program
         }
     }
 }
+
