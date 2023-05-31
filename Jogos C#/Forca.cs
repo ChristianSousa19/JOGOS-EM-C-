@@ -1,11 +1,14 @@
 using System;
+using System.Linq;
 
-class Program
+
+class programas
 {
     static string[] words = { "creatina", "whey", "deca", "durateston", "trembolona" };
     static Random random = new Random();
-    static string wordToGuess;
-    static char[] guessedLetters;
+    static string wordToGuess="";
+    static char[] guessedLetters = new char[10];
+
     static int attemptsLeft;
 
     static void Main(string[] args)
@@ -86,14 +89,7 @@ class Program
 
     static bool WordGuessed()
     {
-        for (int i = 0; i < guessedLetters.Length; i++)
-        {
-            if (guessedLetters[i] == '_')
-            {
-                return false;
-            }
-        }
-        return true;
+        return !guessedLetters.Contains('_');
     }
 
     static void DisplayEndGameMessage()
@@ -110,4 +106,3 @@ class Program
         }
     }
 }
-
