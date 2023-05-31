@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-class Program
+class programa
 {
     static int width = 40;
     static int height = 20;
@@ -19,11 +19,6 @@ class Program
 
     static void Main(string[] args)
     {
-        Console.WindowHeight = height + 2;
-        Console.WindowWidth = width + 2;
-        Console.BufferHeight = Console.WindowHeight;
-        Console.BufferWidth = Console.WindowWidth;
-
         InitializeGame();
 
         while (!gameover)
@@ -50,7 +45,7 @@ class Program
         Console.ReadLine();
     }
 
-    static void InitializeGame()
+   static void InitializeGame()
     {
         ballX = width / 2;
         ballY = height / 2;
