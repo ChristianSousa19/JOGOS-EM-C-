@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-class Program
+class Programa
 {
     static int width = 20;
     static int height = 10;
@@ -17,11 +17,6 @@ class Program
 
     static void Main(string[] args)
     {
-        Console.WindowHeight = height + 2;
-        Console.WindowWidth = width + 2;
-        Console.BufferHeight = Console.WindowHeight;
-        Console.BufferWidth = Console.WindowWidth;
-
         InitializeSnake();
         GenerateFood();
 
@@ -57,7 +52,7 @@ class Program
         Console.ReadLine();
     }
 
-    static void InitializeSnake()
+static void InitializeSnake()
     {
         int startX = width / 2;
         int startY = height / 2;
